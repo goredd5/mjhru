@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+      <section id = "jumbo" class="jumbotron-fluid">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="display-3 ml-auto">Hi, I'm Mike</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-7">
+              <p class="lead">Passionate about building great products, teams, and culture.  </p>
+              <p class="lead pt-4" id = "joor">Proud of the last 5 years I spent at <a href="https://jooraccess.com" target="_blank">JOOR</a>, building the largest wholesale fashion marketplace.</p>
+              <p class="lead pt-4"> Ready for what's next.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-7 text-left ">
+            </div>
+            <div class="col-md-5" id="attr">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="nav fixed-bottom navbar navbar-light" id="xx">
+        <nav class="nav nav-pills ml-auto">
+          <a class="nav-link" href="#builder">Builder</a>
+
+          <a class="nav-link" href="#leader">Pacesetter</a>
+
+          <a class="nav-link" href="#differenceMaker">Difference Maker</a>
+        </nav>
+      </nav>
+
+      <div  class="tall alt" id="builder">
+        <div class="container pb-4">
+          <h1 class="pb-2">Builder</h1>
+          <div class="row">
+            <div class="col-md-8">
+
+              <p>
+                I've always been interested in creating and improving things.  My parents owned a bar when I was growing up
+                and I learned early on how to use my hands to physically build things.  Painting, light carpentry, holding
+                the ladder, mopping the floors, adding a new extension so we could serve lunch - it was all about continuously
+                improving the business.  As we made changes, and tried new ideas, I came to really enjoy the process.  Listening to
+                customers, making changes, seeing the results and trying different things if they didn't work.
+              </p>
+              <p>
+                I didn't realize it until much later, but those early experiences of building the family business sparked something in me.
+                I love building things.  I enjoy not only the final finished product, but the thousand steps that got us there.  Making sure
+                those steps are repeatable - keeping track of what works and throwing out what doesn't.
+              </p>
+              <p>
+                Product Management is more than just a set of requirements and a deadline.  It's living in the product, understanding the
+                right questions to ask, rolling up your sleeves and doing any task necessary and being grateful for the people who you're
+                lucky enough to have using your products.
+              </p>
+              <p>
+                I believe product leads, but it also serves.  A product team should lead by example and serve with it's results.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <img src="{% static  'builder.png' %}" id="builderImg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tall" id="leader">
+        <div class="container pb-4">
+            <h1 class="pb-2">Pacesetter</h1>
+            <div class="row">
+              <div class="col-md-4 pb-4">
+                <img src="{% static  'pacesetter.png' %}" id="paceSetter">
+              </div>
+              <div class="col-md-8">
+                <p>
+                  I belive in leading by example.  I was lucky enough to have really good mentors early in my career that never lectured me but
+                  let me ask questions and learn from their example.  I learned the value of taking personal pride in my work, not being afraid to do things
+                  I hadn't done before, and being open and honest with my boss.  It's also really important for people on the team to see directors
+                  working as hard if not harder than they are.
+                </p>
+                <p>
+                  In my experience, teams perform at their highest when they have <span class="font-italic"><u>clarity on the goals</u></span>, are<span class="font-italic"><u> invested in the team's success</u></span>, and
+                  feel <span class="font-italic"><u>supported by their team</u></span> and the company.  My role as a leader in an organization is to set up this framework so the teams
+                  can focus on the important work they're doing.
+                </p>
+                <p>
+                  It's also important to be involved in the success and growth of individual team members.  It's important as a manager
+                  to understand what motivates each team member, and what they're looking to get out of their job.  I like to have
+                  weekly one on ones with team members, and weekly meetings with the teams on progress on our goals.
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="tall bg-light" id="differenceMaker">
+        <main role="main" class="container pb-4">
+          <h1 class="pb-2">Difference Maker</h1>
+          <p>At JOOR and Grubhub, I spent a lot of time launching new products that opened up new revenue and helped cement the dominant
+            position of the companies.  I also worked extensively on hiring and team building and am most proud of the
+          </p>
+          <div >
+            {% for job in jobs.all %}
+            <div class="media text-muted pt-3">
+              <img src="{{ job.image.url }}" alt="" class="mr-2 rounded icon" >
+              <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">{{ job.summary }}</strong>
+                {{ job.details }}
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+        </main>
+
+      </div>
+
+
+      <div class="album py-5 bg-light" id="skills">
+
+      </div>
+
+  {% endblock %}
