@@ -14,7 +14,7 @@
             <div class="col-md-5">
             </div>
             <div class="col-md-7">
-              <p class="lead">Passionate about building great products, teams, and culture.  </p>
+              <p class="lead">Passionate about building great products, teams and culture.  </p>
               <p class="lead pt-4" id = "joor">Proud of the last 5 years I spent at <a href="https://jooraccess.com" target="_blank">JOOR</a>, building the largest wholesale fashion marketplace.</p>
               <p class="lead pt-4"> Ready for what's next.</p>
             </div>
@@ -48,7 +48,7 @@
                 I've always been interested in creating and improving things.  My parents owned a bar when I was growing up
                 and I learned early on how to use my hands to physically build things.  Painting, light carpentry, holding
                 the ladder, mopping the floors, adding a new extension so we could serve lunch - it was all about continuously
-                improving the business.  As we made changes, and tried new ideas, I came to really enjoy the process.  Listening to
+                improving the business.  As we made changes and tried new ideas, I came to really enjoy the process.  Listening to
                 customers, making changes, seeing the results and trying different things if they didn't work.
               </p>
               <p>
@@ -82,18 +82,18 @@
                 <p>
                   I belive in leading by example.  I was lucky enough to have really good mentors early in my career that never lectured me but
                   let me ask questions and learn from their example.  I learned the value of taking personal pride in my work, not being afraid to do things
-                  I hadn't done before, and being open and honest with my boss.  It's also really important for people on the team to see directors
+                  I hadn't done before and being open and honest with my boss.  It's also really important for people on the team to see directors
                   working as hard if not harder than they are.
                 </p>
                 <p>
-                  In my experience, teams perform at their highest when they have <span class="font-italic"><u>clarity on the goals</u></span>, are<span class="font-italic"><u> invested in the team's success</u></span>, and
-                  feel <span class="font-italic"><u>supported by their team</u></span> and the company.  My role as a leader in an organization is to set up this framework so the teams
+                  In my experience, teams perform at their highest when they have <span class="font-italic"><u>clarity on the goals</u></span>, are<span class="font-italic"><u> invested in the team's success</u></span>
+                  and feel <span class="font-italic"><u>supported by their team</u></span> and the company.  My role as a leader in an organization is to set up this framework so the teams
                   can focus on the important work they're doing.
                 </p>
                 <p>
                   It's also important to be involved in the success and growth of individual team members.  It's important as a manager
-                  to understand what motivates each team member, and what they're looking to get out of their job.  I like to have
-                  weekly one on ones with team members, and weekly meetings with the teams on progress on our goals.
+                  to understand what motivates each team member and what they're looking to get out of their job.  I like to have
+                  weekly one on ones with team members and weekly meetings with the teams on progress on our goals.
                 </p>
               </div>
             </div>
@@ -103,27 +103,74 @@
       <div class="tall bg-light" id="differenceMaker">
         <main role="main" class="container pb-4">
           <h1 class="pb-2">Difference Maker</h1>
-          <p>At JOOR and Grubhub, I spent a lot of time launching new products that opened up new revenue and helped cement the dominant
-            position of the companies.  I also worked extensively on hiring and team building and am most proud of the
+          <p>I pursued working at a startup in the hopes that my work would have meaning, not just to me
+            but to the entire company.  I strive to be a difference maker by taking ownership, having a positive
+            attitude and taking a lot of pride in my work.
           </p>
           <div >
-            {% for job in jobs.all %}
-            <div class="media text-muted pt-3">
-              <img src="{{ job.image.url }}" alt="" class="mr-2 rounded icon" >
+            <div id = "management" class="media text-muted pt-3">
+              <img src="{% static 'hiring.jpg' %}" alt="" class="mr-2 rounded icon" >
               <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                <strong class="d-block text-gray-dark">{{ job.summary }}</strong>
-                {{ job.details }}
+                <strong class="d-block text-gray-dark">Hiring & Management</strong>
+                <span>Software: Glassdoor | Google Hire | jazz HR | G Suite | Slack</span><br>
+                <span>Hiring and retaining talent is a great responsiblity and key to every great company's success.
+                  From writing job specs and putting together interview kits, to setting up career development and
+                  tracking goals, keeping a talented team motivated and growing is something I really enjoy.
+                </span>
               </p>
             </div>
-            {% endfor %}
+
+            <div id = "execution" class="media text-muted pt-3">
+              <img src="{% static 'execution.jpg' %}" alt="" class="mr-2 rounded icon" >
+              <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">Execution</strong>
+                <span>Software: JIRA | Confluence | Clubhouse.io | Trello</span><br>
+                <span>Shipping product is about the team executing on it's plan and it takes a strong partnership of product, design and
+                  engineering.  The bar must be set high by leadership and with the right people, who own the goals and planning/communication, great
+                  product can be consistenly shipped.
+                </span>
+              </p>
+            </div>
+
+
+            <div id = "analytics" class="media text-muted pt-3">
+              <img src="{% static 'analytics.jpg' %}" alt="" class="mr-2 rounded icon" >
+              <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">Product Analytics</strong>
+                <span>Software & Skills: | SQL | Google Analytics | Mixpanel | Hotjar</span><br>
+                <span>That which is measured, improves.  Analytics requires a lot of thoughful planning and dedication but when it's
+                right, it's an incredible tool to understand your customers and track the success of your efforts.</span>
+              </p>
+            </div>
+            <div id = "techincal" class="media text-muted pt-3">
+              <img src="{% static 'tech.jpg' %}" alt="" class="mr-2 rounded icon" >
+              <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">Technical</strong>
+                <span>Software & Skills: Unix | Charles Web Proxy | Git | iOS | XCode | Technical Troubleshooting | PHP/Python (Limited) | HTML | CSS | Bootstrap</span><br>
+                <span>I've been lucky to work with some very technical and generous development teams over the years and learned a great deal about how modern web and mobile
+                  apps work under the hood.  My time in software testing has also given me a lot of experience in troubleshooting which has come in
+                   handy in launching products and releases.  I used my job search and building this website as an opportunity to learn how to use Django Web Framework,
+                  Bootstrap, git and am deploying it to Heroku.  <a href="https://github.com/goredd5/mjhru" target="_blank">github/mjhru</a></span>
+              </p>
+            </div>
+            <div id = "design" class="media text-muted pt-3">
+              <img src="{% static 'design.jpg' %}" alt="" class="mr-2 rounded icon" >
+              <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark"> Design & UX</strong>
+                <span>Software: Photoshop | Invision | Sketch | Balsamiq</span><br>
+                <span>In the early days of JOOR we didn't always have a dedicated design or UX team members so the PM team learned to work within the design & UX guidelines
+                we had to continue to ship product.
+                Over time we brought on full time designers & UX team members to have an equal footing with product and engineering in developing our
+                product.  But this was invaluable experience and really helped us to understand our users. </span>
+
+
+              </p>
+            </div>
+
           </div>
         </main>
 
       </div>
 
-
-      <div class="album py-5 bg-light" id="skills">
-
-      </div>
 
   {% endblock %}
